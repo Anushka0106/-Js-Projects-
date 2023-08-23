@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+
+        body{
+            background-color:#6e5f5f;
+            font-family: 'Roboto',sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            padding: 10px;
+            text-align: center;
+            background:linear-gradient(135deg,#153677,#4e085f);
+
+
+
+        }
+        .todo-app{
+width: 100%;
+max-width: 540px;
+background: white;
+margin: 100px auto 20px;
+padding: 40px 30px 70px;
+border-radius: 10px;
+        }
+        .todo-app h2{
+color: aqua;
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+
+        }
+        .todo-app h2 img{
+            width: 30px;
+            margin-left: 10px;
+        }
+
+#input{
+    width: 270px;
+    padding: 8px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 19px;
+
+}   
+button{
+    width: 60px;
+    height: 41px;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    font-size: 19px;
+    border: none;
+    outline: none
+}     
+    </style>
+</head>
+<body>
+   <div class="container">
+  <div class="todo-app">
+    <h2>To-Do List <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-list-icon-png-image_3772778.jpg" ></h2>
+  </div>>
+
+   </div>
+   <script>
+    let input= document.getElementById("inp")
+    let text = document.getElementById(".txt")
+
+function Add(){
+    if(input.value ==""){
+        alert("Please Enter Your task")
+    }
+    else{
+        let newEle = document.createElement("ul")
+        newEle.innerHTML ='${input.value}'
+        text.appendChild(newEle)
+    }
+}
+   </script>
+</body>
+</html>
